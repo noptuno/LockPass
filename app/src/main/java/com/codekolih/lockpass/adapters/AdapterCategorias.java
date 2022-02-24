@@ -38,10 +38,6 @@ public class AdapterCategorias extends RecyclerView.Adapter<AdapterCategorias.It
 
 
 
-
-
-
-
 //constructores del holder Referenias llama desde la Clase Adapter
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder view, int position) {

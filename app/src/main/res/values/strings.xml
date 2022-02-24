@@ -2,4 +2,14 @@
     <string name="app_name">LockPass</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="Nombre_Cuenta">Nombre de la cuenta</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Cancelar">Cancelar</string>
+
+
+    <string name="Password">Password</string>
+
+
 </resources>
