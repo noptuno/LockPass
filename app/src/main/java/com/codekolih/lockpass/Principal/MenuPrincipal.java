@@ -9,12 +9,19 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.codekolih.lockpass.Fragments.CategoriaFragment;
 import com.codekolih.lockpass.Fragments.FavoritosFragment;
@@ -30,14 +37,15 @@ import kotlin.jvm.functions.Function1;
 public class MenuPrincipal extends AppCompatActivity  implements SearchView.OnQueryTextListener  {
 
     private MeowBottomNavigation bnv_Main;
-  private FloatingActionButton floatingActionButton;
+    private FloatingActionButton floatingActionButton;
 
-
+    Context contexto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        contexto = this;
 
         floatingActionButton = findViewById(R.id.floatingActionButton);
 
@@ -78,10 +86,12 @@ public class MenuPrincipal extends AppCompatActivity  implements SearchView.OnQu
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(MenuPrincipal.this, RegistrarPass.class);
+/*
+                Intent intent = new Intent(MenuPrincipal.this, RegistrarCuenta.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+*/
+            new RegistroDialog(contexto);
 
             }
         });

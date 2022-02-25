@@ -11,7 +11,7 @@
         android:theme="@style/Theme.LockPass"
         android:windowSoftInputMode="adjustResize">
         <activity
-            android:name=".Principal.RegistrarPass"
+            android:name=".Principal.RegistrarCuenta"
             android:exported="false" />
         <activity
             android:name=".Principal.MenuPrincipal"

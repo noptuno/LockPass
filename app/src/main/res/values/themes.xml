@@ -10,7 +10,7 @@
         <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
         <item name="colorOnSecondary">@color/secondaryTextColor</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/primaryDarkColor</item>
         <!-- Customize your theme here. -->
 
 
@@ -50,12 +50,5 @@
 
     </style>
 
-    <style name="Theme.LockPass.Fullscreen" parent="Theme.LockPass">
-        <item name="android:actionBarStyle">
-            @style/Widget.Theme.LockPass.ActionBar.Fullscreen
-        </item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@null</item>
-    </style>
 
 </resources>
