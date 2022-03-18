@@ -86,13 +86,20 @@ public class MenuPrincipal extends AppCompatActivity  implements SearchView.OnQu
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-/*
-                Intent intent = new Intent(MenuPrincipal.this, RegistrarCuenta.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-*/
-            new RegistroDialog(contexto);
 
+                Intent intent = new Intent(MenuPrincipal.this, RegistroCuentas.class);
+                startActivity(intent);
+               // overridePendingTransition(R.anim.dialog_in, R.anim.dialog_out);
+
+         //   new RegistroDialog(contexto);
+/*
+                Bundle args = new Bundle();
+                args.putString("title", "Dialog with Action Bar");
+                RegistroDialog actionbarDialog = new RegistroDialog();
+                actionbarDialog.setArguments(args);
+                actionbarDialog.show(getSupportFragmentManager(),
+                        "action_bar_frag");
+*/
             }
         });
 
@@ -116,7 +123,6 @@ public class MenuPrincipal extends AppCompatActivity  implements SearchView.OnQu
         switch (item.getItemId()) {
 
             case R.id.action_search:
-
 
                 item.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
                     @Override

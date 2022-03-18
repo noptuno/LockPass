@@ -3,22 +3,45 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable-v24/custon_button_cancelar.xml" value="0.2965" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable-v24/custon_fondo_text.xml" value="0.1935" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.323" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/custon_button.xml" value="0.1675" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/custon_button_cancelar.xml" value="0.2965" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/custon_fondo_blanco.xml" value="0.265" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/divider.xml" value="0.323" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/fondoappbar.xml" value="0.323" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_add.xml" value="0.323" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_baseline_vpn_key_24.xml" value="0.323" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_buscador.xml" value="0.264" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_categorias.xml" value="0.323" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_check.xml" value="0.323" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_clear.xml" value="0.323" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_favoritos.xml" value="0.1935" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_launcher_background.xml" value="0.323" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_listadd.xml" value="0.1935" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_listas.xml" value="0.323" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_lock.xml" value="0.323" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/drawable/ic_sumador.xml" value="0.1935" />
-        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/activity_lista_categoria.xml" value="0.28331822302810517" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/activity_registrar_cuenta.xml" value="0.33" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/activity_registrar_pass.xml" value="0.2" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/activity_registro_categoria.xml" value="0.28331822302810517" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/activity_registro_cuentas.xml" value="0.33" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/alerdiaglogcrearpassword.xml" value="0.15220179563916203" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/dialog_registro_cuentas.xml" value="0.21077383497221033" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/fragment_blank.xml" value="0.3432971014492754" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/fragment_categoria.xml" value="0.18" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/fragment_favoritos.xml" value="0.25885416666666666" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/fragment_listas.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/item_note_categoria.xml" value="0.33" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/item_note_categoriaa.xml" value="0.28331822302810517" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/item_note_categorias.xml" value="0.33469202898550726" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/list_categoria.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/layout/text.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/menu/menu_buscador.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/David Garcia/AndroidStudioProjects/Personal/LockPassProyect/app/src/main/res/menu/menu_registro.xml" value="0.2975630611372381" />
       </map>
     </option>
   </component>

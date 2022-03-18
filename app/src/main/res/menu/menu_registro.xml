@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Favorito"
+        android:id="@+id/action_favorito"
+        android:icon="@drawable/ic_favoritos"
+        app:showAsAction="always|collapseActionView"></item>
+
+    <item android:title="Borrar"
+        android:icon="@drawable/ic_clear"
+        android:id="@+id/action_borrar"
+        app:showAsAction="collapseActionView"></item>
+    <item android:title="Categoria"
+        android:icon="@drawable/ic_categorias"
+        android:id="@+id/action_categoria"
+        app:showAsAction="collapseActionView"></item>
+
+    <item android:title="Salir"
+        android:icon="@drawable/ic_tocar"
+        android:id="@+id/action_salir"
+        app:showAsAction="collapseActionView"></item>
+
+
+</menu>

@@ -6,12 +6,12 @@ public class Categorias {
     String nombre_categoria;
     String estado_categoria;
     String descripcion_categoria;
+    String icono_categoria;
 
     public Categorias() {
     }
 
-    public Categorias(Integer id_categoria, String nombre_categoria, String estado_categoria, String descripcion_categoria) {
-        this.id_categoria = id_categoria;
+    public Categorias(String nombre_categoria, String estado_categoria, String descripcion_categoria) {
         this.nombre_categoria = nombre_categoria;
         this.estado_categoria = estado_categoria;
         this.descripcion_categoria = descripcion_categoria;
@@ -48,4 +48,16 @@ public class Categorias {
     public void setDescripcion_categoria(String descripcion_categoria) {
         this.descripcion_categoria = descripcion_categoria;
     }
+
+    public String toString() {
+        return "Categorias{" +
+                "id=" + id_categoria +
+                "nombre=" + nombre_categoria +
+                ", estado='" + estado_categoria + '\'' +
+                ", descripcion='" + descripcion_categoria + '\'' +
+                '}';
+    }
+
+
+
 }

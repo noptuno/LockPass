@@ -9,5 +9,6 @@
                 <color name="secondaryDarkColor">#0086c3</color>
                 <color name="primaryTextColor">#000000</color>
                 <color name="secondaryTextColor">#FFFFFF</color>
+                <color name="sinfondo">#00FFFFFF</color>
 
 </resources>

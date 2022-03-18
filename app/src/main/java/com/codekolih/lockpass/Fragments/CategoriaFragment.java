@@ -70,12 +70,14 @@ public class CategoriaFragment extends Fragment {
 
         listCategorias = new ArrayList<>();
 
-        listCategorias.add(new Categorias(1,"nombre1","estado1","descripcion1"));
-        listCategorias.add(new Categorias(2,"nombre2","estado2","descripcion2"));
-        listCategorias.add(new Categorias(3,"nombre3","estado3","descripcion3"));
-        listCategorias.add(new Categorias(4,"nombre4","estado4","descripcion4"));
+        listCategorias.add(new Categorias("nombre1","estado1","descripcion1"));
+        listCategorias.add(new Categorias("nombre2","estado2","descripcion2"));
+        listCategorias.add(new Categorias("nombre3","estado3","descripcion3"));
+        listCategorias.add(new Categorias("nombre4","estado4","descripcion4"));
 
         adapterCategorias = new AdapterCategorias(listCategorias);
+
+
         recyclerview.setAdapter(adapterCategorias);
 
 

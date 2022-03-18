@@ -4,43 +4,61 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.util.DisplayMetrics;
-import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
 
 import com.codekolih.lockpass.R;
 
-public class RegistroDialog {
+public class RegistroDialog extends DialogFragment {
 
-    public RegistroDialog(Context contexto)
+    final Dialog dialog;
+    final ImageButton guardar;
+Toolbar tolbar;
 
-    {
 
-        final Dialog dialog = new Dialog(contexto);
+    public RegistroDialog(Context contexto){
+
+        dialog = new Dialog(contexto);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(false);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.setContentView(R.layout.activity_registrar_cuenta);
+        dialog.setContentView(R.layout.dialog_registro_cuentas);
         setDialogWidthAndHeight(dialog,contexto);
-        dialog.show();
+        tolbar = dialog.findViewById(R.id.toolbar_registro);
+        tolbar.inflateMenu(R.menu.menu_registro);
+        tolbar.setTitle(null);
 
-
-
-        final ImageButton guardar = dialog.findViewById(R.id.imgguardar);
-        guardar.setOnClickListener(new View.OnClickListener() {
+        tolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
-            public void onClick(View view) {
-                dialog.dismiss();
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+
+                    case R.id.action_salir:
+
+                        dialog.dismiss();
+
+                        break;
+
+                }
+                return true;
             }
         });
 
 
+        guardar = dialog.findViewById(R.id.imgguardar);
+        guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
 
+        dialog.show();
     }
 
     public void setDialogWidthAndHeight(Dialog dialog,Context contexto){

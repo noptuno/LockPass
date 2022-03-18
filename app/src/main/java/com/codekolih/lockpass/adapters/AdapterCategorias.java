@@ -18,6 +18,7 @@ public class AdapterCategorias extends RecyclerView.Adapter<AdapterCategorias.It
 
     private List<Categorias> list_Categoria;
     private List<Categorias> list_Orig_Categorias;
+    private OnNoteSelectedListener onNoteSelectedListener;
 
 //constructor clase Adapter
     public AdapterCategorias(List<Categorias> categorias) {
@@ -25,7 +26,13 @@ public class AdapterCategorias extends RecyclerView.Adapter<AdapterCategorias.It
         this.list_Orig_Categorias = categorias;
     }
 
+    public void setOnNoteSelectedListener(OnNoteSelectedListener onNoteSelectedListener) {
+        this.onNoteSelectedListener = onNoteSelectedListener;
+    }
 
+    public interface OnNoteSelectedListener {
+        void onClick(Categorias note);
+    }
 
     //funcion del adapter para setear la lista
     public void setFilter(List<Categorias> categorias){
@@ -33,9 +40,6 @@ public class AdapterCategorias extends RecyclerView.Adapter<AdapterCategorias.It
         list_Categoria.addAll(categorias);
         notifyDataSetChanged();
     }
-
-
-
 
 
 //constructores del holder Referenias llama desde la Clase Adapter
@@ -48,10 +52,13 @@ public class AdapterCategorias extends RecyclerView.Adapter<AdapterCategorias.It
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_note_categorias, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_note_categoria, parent, false);
         return new ItemViewHolder(view);
 
     }
+
+
+
 
     @Override
     public int getItemCount() {
@@ -70,17 +77,29 @@ public class AdapterCategorias extends RecyclerView.Adapter<AdapterCategorias.It
         public ItemViewHolder(View itemView) {
             super(itemView);
            // itemView.setClickable(true);
-            id_categoria = (TextView) itemView.findViewById(R.id.txt_id_categoria);
-            nombre_categoria = (TextView) itemView.findViewById(R.id.txt_nombre_categoria);
-            estado_categoria = (TextView) itemView.findViewById(R.id.txt_estado_categoria);
-            descripcion_categoria = (TextView) itemView.findViewById(R.id.txt_descripcion_categoria);
+            id_categoria = (TextView) itemView.findViewById(R.id.txt_cat_id);
+            nombre_categoria = (TextView) itemView.findViewById(R.id.txt_cat_nombre);
+            estado_categoria = (TextView) itemView.findViewById(R.id.txt_cat_estado);
+            descripcion_categoria = (TextView) itemView.findViewById(R.id.txt_cat_descripcion);
         }
 
         public void bind(Categorias categoria) {
+
            id_categoria.setText(""+ categoria.getId_categoria());
            nombre_categoria.setText(categoria.getNombre_categoria());
            estado_categoria.setText(categoria.getEstado_categoria());
            descripcion_categoria.setText(categoria.getDescripcion_categoria());
+
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (onNoteSelectedListener != null) {
+                        onNoteSelectedListener.onClick(categoria);
+                    }
+                }
+            });
+
 
         }
 

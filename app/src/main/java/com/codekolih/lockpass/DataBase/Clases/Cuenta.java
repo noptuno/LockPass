@@ -3,7 +3,7 @@ package com.codekolih.lockpass.DataBase.Clases;
 public class Cuenta {
 
     Integer id_cuenta;
-    Integer id_categoria;
+    String id_categoria;
     String nombre_cuenta;
     String password_cuenta;
     String fecha_cuenta;
@@ -13,8 +13,7 @@ public class Cuenta {
     public Cuenta() {
     }
 
-    public Cuenta(Integer id_cuenta, Integer id_categoria, String nombre_cuenta, String password_cuenta, String fecha_cuenta, String nota_cuenta, String link_cuenta) {
-        this.id_cuenta = id_cuenta;
+    public Cuenta(String id_categoria, String nombre_cuenta, String password_cuenta, String fecha_cuenta, String nota_cuenta, String link_cuenta) {
         this.id_categoria = id_categoria;
         this.nombre_cuenta = nombre_cuenta;
         this.password_cuenta = password_cuenta;
@@ -22,6 +21,20 @@ public class Cuenta {
         this.nota_cuenta = nota_cuenta;
         this.link_cuenta = link_cuenta;
     }
+
+    public String toString() {
+        return "Producto{" +
+                "id=" + id_cuenta +
+                "idcategoria=" + id_categoria +
+                ", nombre='" + nombre_cuenta + '\'' +
+                ", pass='" + password_cuenta + '\'' +
+                ", fecha='" + fecha_cuenta + '\'' +
+                ", nota='" + nota_cuenta + '\'' +
+                ", link='" + link_cuenta + '\'' +
+                '}';
+    }
+
+
 
     public Integer getId_cuenta() {
         return id_cuenta;
@@ -31,11 +44,11 @@ public class Cuenta {
         this.id_cuenta = id_cuenta;
     }
 
-    public Integer getId_categoria() {
+    public String getId_categoria() {
         return id_categoria;
     }
 
-    public void setId_categoria(Integer id_categoria) {
+    public void setId_categoria(String id_categoria) {
         this.id_categoria = id_categoria;
     }
 

@@ -7,57 +7,41 @@
     android:background="@drawable/custon_fondo_blanco"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="5dp"
-    tools:context=".Principal.RegistrarCuenta">
+    tools:context=".Principal.RegistroCuentas">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_registro"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp">
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
 
-        <ImageButton
-            android:id="@+id/imageButton"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@drawable/custon_button"
-            android:contentDescription="@string/Guardar"
-            android:cropToPadding="false"
-            android:src="@drawable/ic_clear"
-            app:tint="@color/secondaryTextColor" />
+            android:layout_height="?attr/actionBarSize"
+            android:divider="@drawable/divider"
+            android:dividerPadding="8dp"
+            android:orientation="horizontal"
+            android:showDividers="end">
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1" />
+            <TextView
+                android:id="@+id/toolbar_save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_cancelable"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textAllCaps="true" />
 
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@drawable/custon_button"
-            android:contentDescription="@string/compartir"
-            android:src="@drawable/ic_favoritos"
-            app:tint="@color/secondaryTextColor" />
+        </LinearLayout>
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:id="@+id/imgguardar"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@drawable/custon_button"
-            android:contentDescription="@string/Cancelar"
-            android:src="@drawable/ic_check"
-            app:tint="@color/secondaryTextColor" />
-
-    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -66,13 +50,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="250dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/ilustraciontres" />
 
@@ -109,7 +93,7 @@
                 app:startIconDrawable="@drawable/ic_lock">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textPassword"
+                    android:id="@+id/edit_cue_password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textPassword"
@@ -120,37 +104,49 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
-
-            <EditText
-                android:id="@+id/editTextTime"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine" />
-
-            <CheckedTextView
-                android:id="@+id/checkedTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CheckedTextView" />
-
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="visible">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+
+        <ImageButton
+            android:id="@+id/imgagregar"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/custon_button"
+            android:contentDescription="@string/Guardar"
+            android:cropToPadding="false"
+            android:src="@drawable/ic_add"
+            app:tint="@color/secondaryTextColor" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/imgguardar"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/custon_button"
+            android:contentDescription="@string/Cancelar"
+            android:src="@drawable/ic_check"
+            app:tint="@color/secondaryTextColor" />
+
+    </LinearLayout>
 
 
 </LinearLayout>
