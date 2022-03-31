@@ -12,7 +12,7 @@
         android:windowSoftInputMode="adjustResize">
         <activity
             android:name=".Principal.ListaCategoria"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Principal.RegistroCategoria"
             android:exported="false" />

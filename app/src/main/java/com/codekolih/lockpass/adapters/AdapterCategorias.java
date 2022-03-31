@@ -35,6 +35,7 @@ public class AdapterCategorias extends RecyclerView.Adapter<AdapterCategorias.It
     }
 
     //funcion del adapter para setear la lista
+
     public void setFilter(List<Categorias> categorias){
         list_Categoria = new ArrayList<>();
         list_Categoria.addAll(categorias);
@@ -56,9 +57,6 @@ public class AdapterCategorias extends RecyclerView.Adapter<AdapterCategorias.It
         return new ItemViewHolder(view);
 
     }
-
-
-
 
     @Override
     public int getItemCount() {

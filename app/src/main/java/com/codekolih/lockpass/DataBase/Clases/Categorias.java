@@ -1,6 +1,8 @@
 package com.codekolih.lockpass.DataBase.Clases;
 
-public class Categorias {
+import java.io.Serializable;
+
+public class Categorias implements Serializable {
 
     Integer id_categoria;
     String nombre_categoria;

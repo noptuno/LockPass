@@ -5,9 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
-import com.codekolih.lockpass.DataBase.Clases.Cuenta;
+import com.codekolih.lockpass.DataBase.Clases.Categorias;
+import com.codekolih.lockpass.DataBase.Clases.Cuentas;
 import com.codekolih.lockpass.DataBase.ConstantsDB;
 
 
@@ -36,46 +36,54 @@ public class CuentaDB {
         }
     }
 
-    private ContentValues clienteMapperContentValues(Cuenta cuenta) {
+    private ContentValues clienteMapperContentValues(Cuentas cuentas) {
         ContentValues cv = new ContentValues();
 
-        cv.put(ConstantsDB.CUE_IDCUENTA, cuenta.getId_cuenta());
-        cv.put(ConstantsDB.CUE_ID_CATEGORIA, cuenta.getId_categoria());
-        cv.put(ConstantsDB.CUE_NOMBRE_CUENTA, cuenta.getNombre_cuenta());
-        cv.put(ConstantsDB.CUE_PASSWORD_CUENTA, cuenta.getPassword_cuenta());
-        cv.put(ConstantsDB.CUE_FECHA_CUENTA, cuenta.getFecha_cuenta());
-        cv.put(ConstantsDB.CUE_NOTA_CUENTA, cuenta.getNota_cuenta());
-        cv.put(ConstantsDB.CUE_LINK_CUENTA, cuenta.getLink_cuenta());
+        cv.put(ConstantsDB.CUE_IDCUENTA, cuentas.getId_cuenta());
+        cv.put(ConstantsDB.CUE_ID_CATEGORIA, cuentas.getId_categoria());
+        cv.put(ConstantsDB.CUE_NOMBRE_CUENTA, cuentas.getNombre_cuenta());
+        cv.put(ConstantsDB.CUE_PASSWORD_CUENTA, cuentas.getPassword_cuenta());
+        cv.put(ConstantsDB.CUE_FECHA_CUENTA, cuentas.getFecha_cuenta());
+        cv.put(ConstantsDB.CUE_NOTA_CUENTA, cuentas.getNota_cuenta());
+        cv.put(ConstantsDB.CUE_LINK_CUENTA, cuentas.getLink_cuenta());
 
         return cv;
     }
 
-    public long insertarCuenta(Cuenta cuenta) {
+    public long insertarCuenta(Cuentas cuentas) {
 
             this.openWriteableDB();
-            long rowID = db.insert(ConstantsDB.TABLA_CUENTA, null, clienteMapperContentValues(cuenta));
+            long rowID = db.insert(ConstantsDB.TABLA_CUENTA, null, clienteMapperContentValues(cuentas));
             this.closeDB();
             return rowID;
     }
 
-    public ArrayList<Cuenta> loadCuenta() {
+    public void eliminarCuentas(int idcuentas) {
+        this.openWriteableDB();
+        String where = ConstantsDB.CUE_IDCUENTA + "= ?";
+        db.delete(ConstantsDB.TABLA_CUENTA, where, new String[]{String.valueOf(idcuentas)});
+        this.closeDB();
+    }
 
-        ArrayList<Cuenta> list = new ArrayList<>();
+
+    public ArrayList<Cuentas> loadCuenta() {
+
+        ArrayList<Cuentas> list = new ArrayList<>();
         this.openReadableDB();
         String[] campos = new String[]{ConstantsDB.CUE_IDCUENTA,ConstantsDB.CUE_ID_CATEGORIA,ConstantsDB.CUE_NOMBRE_CUENTA, ConstantsDB.CUE_PASSWORD_CUENTA, ConstantsDB.CUE_FECHA_CUENTA,ConstantsDB.CUE_NOTA_CUENTA,ConstantsDB.CUE_LINK_CUENTA};
         Cursor c = db.query(ConstantsDB.TABLA_CUENTA, campos, null, null, null, null, null);
 
         try {
             while (c.moveToNext()) {
-                Cuenta cuenta = new Cuenta();
-                cuenta.setId_cuenta(c.getInt(0));
-                cuenta.setId_categoria(c.getString(1));
-                cuenta.setNombre_cuenta(c.getString(2));
-                cuenta.setPassword_cuenta(c.getString(3));
-                cuenta.setFecha_cuenta(c.getString(4));
-                cuenta.setNota_cuenta(c.getString(5));
-                cuenta.setLink_cuenta(c.getString(6));
-                list.add(cuenta);
+                Cuentas cuentas = new Cuentas();
+                cuentas.setId_cuenta(c.getInt(0));
+                cuentas.setId_categoria(c.getString(1));
+                cuentas.setNombre_cuenta(c.getString(2));
+                cuentas.setPassword_cuenta(c.getString(3));
+                cuentas.setFecha_cuenta(c.getString(4));
+                cuentas.setNota_cuenta(c.getString(5));
+                cuentas.setLink_cuenta(c.getString(6));
+                list.add(cuentas);
             }
         } finally {
             c.close();

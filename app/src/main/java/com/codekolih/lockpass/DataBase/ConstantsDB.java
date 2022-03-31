@@ -4,7 +4,7 @@ public class ConstantsDB {
     //General
     public static final String DB_NAME = "CATEGORIA.db";
     public static final int DB_VERSION = 1;
-
+    public static final String CUENTA = "CUENTA";
     //TABLA CATEGORIA
     public static final String TABLA_CATEGORIAS = "tabla_categoria";
     public static final String CAT_IDCATEGORIA = "_id_categoria";

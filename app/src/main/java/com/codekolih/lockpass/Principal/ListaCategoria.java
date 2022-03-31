@@ -16,6 +16,7 @@ import com.codekolih.lockpass.DataBase.Clases.Categorias;
 import com.codekolih.lockpass.R;
 import com.codekolih.lockpass.adapters.AdapterCategorias;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -59,7 +60,12 @@ public class ListaCategoria extends AppCompatActivity {
             @Override
             public void onClick(Categorias categoria) {
 
-                Toast.makeText(getApplicationContext(),categoria.toString(),Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(),categoria.toString(),Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent();
+                intent.putExtra(RegistroCuentas.TIPO_CATEGORIA, categoria);
+                setResult(RESULT_OK, intent);
+                finish();
 
             }
 

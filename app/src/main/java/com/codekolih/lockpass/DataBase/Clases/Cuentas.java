@@ -1,6 +1,8 @@
 package com.codekolih.lockpass.DataBase.Clases;
 
-public class Cuenta {
+import java.io.Serializable;
+
+public class Cuentas implements Serializable {
 
     Integer id_cuenta;
     String id_categoria;
@@ -10,10 +12,11 @@ public class Cuenta {
     String nota_cuenta;
     String link_cuenta;
 
-    public Cuenta() {
+    public Cuentas() {
+
     }
 
-    public Cuenta(String id_categoria, String nombre_cuenta, String password_cuenta, String fecha_cuenta, String nota_cuenta, String link_cuenta) {
+    public Cuentas(String id_categoria, String nombre_cuenta, String password_cuenta, String fecha_cuenta, String nota_cuenta, String link_cuenta) {
         this.id_categoria = id_categoria;
         this.nombre_cuenta = nombre_cuenta;
         this.password_cuenta = password_cuenta;
