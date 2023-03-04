@@ -2,8 +2,8 @@ package com.codekolih.lockpass.DataBase;
 
 public class ConstantsDB {
     //General
-    public static final String DB_NAME = "CATEGORIA.db";
-    public static final int DB_VERSION = 1;
+    public static final String DB_NAME = "CUENTAS.db";
+    public static final int DB_VERSION = 2;
     public static final String CUENTA = "CUENTA";
     //TABLA CATEGORIA
     public static final String TABLA_CATEGORIAS = "tabla_categoria";
@@ -28,6 +28,7 @@ public class ConstantsDB {
     public static final String CUE_FECHA_CUENTA = "fecha_cuenta";
     public static final String CUE_NOTA_CUENTA = "nota_cuenta";
     public static final String CUE_LINK_CUENTA = "link_cuenta";
+    public static final String CUE_USUARIO_CUENTA = "usuario_cuenta";
 
     public static final String TABLA_CUENTA_SQL =
             "CREATE TABLE  " + TABLA_CUENTA + "(" +
@@ -37,7 +38,8 @@ public class ConstantsDB {
                     CUE_PASSWORD_CUENTA+ " TEXT," +
                     CUE_FECHA_CUENTA+ " TEXT," +
                     CUE_NOTA_CUENTA+ " TEXT," +
-                    CUE_LINK_CUENTA  + " TEXT);" ;
+                    CUE_LINK_CUENTA+ " TEXT," +
+                    CUE_USUARIO_CUENTA  + " TEXT);" ;
 
 
 

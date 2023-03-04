@@ -11,10 +11,6 @@
         android:icon="@drawable/ic_clear"
         android:id="@+id/action_borrar"
         app:showAsAction="collapseActionView"></item>
-    <item android:title="Categoria"
-        android:icon="@drawable/ic_categorias"
-        android:id="@+id/action_categoria"
-        app:showAsAction="collapseActionView"></item>
 
     <item android:title="Salir"
         android:icon="@drawable/ic_tocar"

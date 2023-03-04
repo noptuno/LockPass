@@ -11,12 +11,13 @@ public class Cuentas implements Serializable {
     String fecha_cuenta;
     String nota_cuenta;
     String link_cuenta;
+    String usuario_cuenta;
 
     public Cuentas() {
 
     }
 
-    public Cuentas(String id_categoria, String nombre_cuenta, String password_cuenta, String fecha_cuenta, String nota_cuenta, String link_cuenta) {
+    public Cuentas(String id_categoria, String nombre_cuenta, String password_cuenta, String fecha_cuenta, String nota_cuenta, String link_cuenta,String usuario_cuenta) {
         this.id_categoria = id_categoria;
         this.nombre_cuenta = nombre_cuenta;
         this.password_cuenta = password_cuenta;
@@ -34,10 +35,17 @@ public class Cuentas implements Serializable {
                 ", fecha='" + fecha_cuenta + '\'' +
                 ", nota='" + nota_cuenta + '\'' +
                 ", link='" + link_cuenta + '\'' +
+                ", usuario='" + usuario_cuenta + '\'' +
                 '}';
     }
 
+    public String getUsuario_cuenta() {
+        return usuario_cuenta;
+    }
 
+    public void setUsuario_cuenta(String usuario_cuenta) {
+        this.usuario_cuenta = usuario_cuenta;
+    }
 
     public Integer getId_cuenta() {
         return id_cuenta;

@@ -85,8 +85,6 @@ public class MenuPrincipal extends AppCompatActivity implements SearchView.OnQue
         });
 
 
-
-
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,14 +92,7 @@ public class MenuPrincipal extends AppCompatActivity implements SearchView.OnQue
                 Intent intent = new Intent(MenuPrincipal.this, RegistroCuentas.class);
                 startActivity(intent);
 
-
-
                 // bnv_Main.setCount(1,"15");
-
-
-
-
-
 
                // overridePendingTransition(R.anim.dialog_in, R.anim.dialog_out);
          //   new RegistroDialog(contexto);
@@ -113,16 +104,18 @@ public class MenuPrincipal extends AppCompatActivity implements SearchView.OnQue
                 actionbarDialog.show(getSupportFragmentManager(),
                         "action_bar_frag");
 */
-
             }
         });
-
-
-
     }
 
 
-private  Boolean escribiendo = false;
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        listFragment.onFilterFuncionFragment();
+
+    }
 
     @Override
     public void finishActivity(int requestCode) {

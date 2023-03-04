@@ -40,5 +40,8 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.32'
 
 
+    implementation 'com.andrognito.patternlockview:patternlockview:1.0.0'
+
+    implementation 'io.github.pilgr:paperdb:2.7.2'
 
 }

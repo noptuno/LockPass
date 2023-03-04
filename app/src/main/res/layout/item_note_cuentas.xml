@@ -20,14 +20,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="15dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/img_cue_logo"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_weight="3"
+            android:layout_weight="2.5"
             app:srcCompat="@drawable/ic_categorias" />
 
         <LinearLayout
@@ -39,37 +40,43 @@
             <TextView
                 android:id="@+id/txt_cue_nombre"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:padding="5dp"
                 android:text="CUENTAS"
                 android:textAlignment="textStart"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
                 tools:ignore="RtlCompat" />
 
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutpassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:hint="@string/Password"
+                app:endIconMode="password_toggle"
+                app:helperText="Required"
+                app:startIconDrawable="@drawable/ic_baseline_vpn_key_24">
 
-                <TextView
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_cue_password"
-                    style="@android:style/Widget.Material.Light.TextView.SpinnerItem"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/custon_fondo_text"
-                    android:drawableRight="@drawable/ic_lock"
-                    android:gravity="center"
-                    android:hint="@string/Seleccionar"
-                    android:textAlignment="center"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:inputType="textPassword"
+                    android:password="true"
                     android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/material_dynamic_neutral40"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    app:textInputLayoutFocusedRectEnabled="false">
 
-            </LinearLayout>
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 

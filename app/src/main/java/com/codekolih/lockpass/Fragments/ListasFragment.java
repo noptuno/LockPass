@@ -88,11 +88,13 @@ public class ListasFragment extends Fragment {
             }
         });
 
-        ActualziarList();
+        onFilterFuncionFragment();
     }
 
+
     @SuppressLint("NotifyDataSetChanged")
-    public void ActualziarList(){
+    public void onFilterFuncionFragment() {
+
 
         try {
 
@@ -105,15 +107,6 @@ public class ListasFragment extends Fragment {
         } catch (Exception e) {
             Log.e("error", "mensajed");
         }
-
-    }
-
-
-    @SuppressLint("NotifyDataSetChanged")
-    public void onFilterFuncionFragment() {
-
-        adapterCuentas.setNotes(listCuentas);
-        adapterCuentas.notifyDataSetChanged();
 
     }
 

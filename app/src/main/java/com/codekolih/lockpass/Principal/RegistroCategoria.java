@@ -13,6 +13,7 @@ import com.codekolih.lockpass.DataBase.Clases.Categorias;
 import com.codekolih.lockpass.R;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class RegistroCategoria extends AppCompatActivity {
 
@@ -46,11 +47,23 @@ public class RegistroCategoria extends AppCompatActivity {
                     Categorias cuenta = new Categorias(nombre_categoria,estado_categoria,descripcion_categoria);
                     RegistrarCategoria(cuenta);
 
+                    /*
+                    String uri = "@drawable/androide";
+                    int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+                    Drawable imagen = ContextCompat.getDrawable(getApplicationContext(), imageResource);
+                    */
+
+
                 }
 
 
             }
         });
+
+
+        app_bar_configuracion();
+
+
     }
 
     public boolean RegistrarCategoria(Categorias categoria) {
@@ -89,6 +102,18 @@ public class RegistroCategoria extends AppCompatActivity {
 
     private void printLog(String tag, String msg){
         Log.e(tag, msg);
+    }
+
+
+
+    private void app_bar_configuracion(){
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return false;
     }
 
 
